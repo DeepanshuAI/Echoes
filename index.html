@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write New-story</title>
+    <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a class="index" href="home.html">My Dynamic Blog</a>
+    </header>
+
+    <main>
+        <section id="newPostSection">
+            <h2>Create a New Post</h2>
+            <label for="postTitle">Post Title:</label>
+            <input type="text" id="postTitle" placeholder="Enter the title">
+
+            <label for="editor-container">Post Content:</label>
+            <div id="editor-container"></div>
+
+            <label for="postTags">Tags (comma-separated):</label>
+            <input type="text" id="postTags" placeholder="e.g., tech, life, coding">
+
+            <div class="button-group">
+                <button id="addPostButton">Add Post</button>
+                <button id="saveDraftButton">Save as Draft</button>
+            </div>
+        </section>
+
+        <section id="draftsSection">
+            <h2>Drafts</h2>
+            <div id="draftsContainer"></div>
+        </section>
+
+        <section id="postsSection">
+            <h2>Published Posts</h2>
+            <div id="postsContainer"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by Your Name &copy; 2024. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
