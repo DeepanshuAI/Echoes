@@ -1,0 +1,220 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+a.index{
+    padding: 1rem 0;
+    color: white;
+    margin-left: 20px;
+text-decoration: none;
+    font-size: 2em;
+font-weight: bold;
+}
+
+
+nav,
+a {
+    color: white;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* nav,
+a:hover {
+    color: aqua;
+} */
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+/* footer {
+    position: absolute;
+    bottom: 0;
+    padding: 19px;
+    width: 100vw;
+    background-color: #555;
+    color: white;
+} */
+html, body {
+    height: 100%; /* Ensures the body takes the full height of the viewport */
+    /* display: flex;
+    flex-direction: column; */
+    margin: 0; /* Removes default margin */
+}
+
+/* Main content should take all available space */
+main {
+    flex: 1; /* Pushes the footer to the bottom if there's not enough content */
+}
+
+/* Footer styles */
+footer {
+    background-color: #555;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+}
+
+
+h1 {
+    color: white;
+    margin-left: 20px;
+}
+
+h2 {
+    color: #007bff;
+}
+/* Delete Button */
+button.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+button.delete-button:hover {
+    background-color: #cc0000;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Add spacing between the Post Content box and Tags input field */
+#editor-container {
+  /* Update the editor container to be taller */
+    height: 100px; /* Increased height for better visibility */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#postTags {
+    margin-top: 1rem; /* Optional: Adds some space above the tags input field */
+}
+
+.button-group button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Post and Draft Styles */
+.post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+    margin-top: 0;
+}
+
+.post-content {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.tags {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.post button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.post button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .button-group button {
+        font-size: 0.9rem;
+    }
+
+    .post {
+        padding: 0.8rem;
+    }
+}
+
+/* Icon Styling (to be added via HTML & JavaScript updates) */
+button.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+button.icon-button:hover {
+    color: #0056b3;
+}
