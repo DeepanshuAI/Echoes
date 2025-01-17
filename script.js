@@ -1,5 +1,3 @@
-// JavaScript for the blog website
-
 // Initialize Quill editor
 const quill = new Quill('#editor-container', {
     theme: 'snow',
@@ -12,14 +10,14 @@ const postTagsInput = document.getElementById('postTags');
 const addPostButton = document.getElementById('addPostButton');
 const postsContainer = document.getElementById('postsContainer');
 
-// Load posts from local storage
+// Load posts from localStorage
 function loadPosts() {
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
     postsContainer.innerHTML = '';
     posts.forEach((post, index) => displayPost(post, index));
 }
 
-// Save posts to local storage
+// Save posts to localStorage
 function savePosts(posts) {
     localStorage.setItem('posts', JSON.stringify(posts));
 }
@@ -35,7 +33,7 @@ function displayPost(post, index) {
 
     const postContent = document.createElement('div');
     postContent.classList.add('post-content');
-    postContent.innerHTML = post.preview;
+    postContent.innerHTML = post.preview; // Display the preview
     postDiv.appendChild(postContent);
 
     const readMoreButton = document.createElement('button');
@@ -84,12 +82,11 @@ addPostButton.addEventListener('click', () => {
 
     const preview = content.length > 200 ? `${content.substring(0, 200)}...` : content;
 
-    const newPost = { title, content, preview, tags, published: true }; // Ensure posts are marked as published
-    console.log('Saving post:', newPost); // Debugging statement
+    const newPost = { title, content, preview, tags };
 
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
     posts.push(newPost);
-    savePosts(posts);
+    localStorage.setItem('posts', JSON.stringify(posts));
 
     postTitleInput.value = '';
     postTagsInput.value = '';
