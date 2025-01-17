@@ -31,13 +31,7 @@ function displayPost(post, index) {
     const readMoreButton = document.createElement('button');
     readMoreButton.textContent = 'Read More';
     readMoreButton.addEventListener('click', () => {
-        if (postContent.innerHTML === post.preview) {
-            postContent.innerHTML = post.content; // Show full content
-            readMoreButton.textContent = 'Read Less';
-        } else {
-            postContent.innerHTML = post.preview; // Collapse to preview
-            readMoreButton.textContent = 'Read More';
-        }
+        viewFullPost(post);
     });
     postDiv.appendChild(readMoreButton);
 
@@ -47,6 +41,12 @@ function displayPost(post, index) {
     postDiv.appendChild(tagsDiv);
 
     postsContainer.appendChild(postDiv);
+}
+
+// Redirect to post.html with full content
+function viewFullPost(post) {
+    localStorage.setItem('currentPost', JSON.stringify(post));
+    window.location.href = 'post.html'; // Redirect to the dedicated page
 }
 
 // Initial load
